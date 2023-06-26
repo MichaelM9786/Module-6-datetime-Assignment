@@ -1,1 +1,18 @@
+import sys
+from datetime import datetime
+from datetime import time
+from datetime import date
+from datetime import timedelta
 
+def main():
+	dt = datetime.now()
+	dt_updated = dt + timedelta(days=730) - timedelta(seconds=60)
+	dt_updated_string = dt_updated.strftime("%X")
+	for line in sys.stdin:
+		data = line.strip().split("\t")
+		if len(data) == 6:
+			d, t, store, item, cost, payment = data
+			print ("{dt_updated}\t{dt_updated_string}\t{store}\t{item}\t{cost}\t{payment}")
+			
+			
+main()
