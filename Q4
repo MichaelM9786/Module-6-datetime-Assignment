@@ -1,0 +1,21 @@
+from datetime import datetime, timedelta
+
+def add_measurements(feet, inches):
+	#Get the current date and time
+	dt = datetime.now()
+	
+	#Create a timedelta object representing measurements
+	measurements_td = timedelta(days=feet * 12 + inches)
+	
+	#Add the measurements timedelta to the current datetime
+	new_dt = dt + measurements_td
+	
+	return new_dt
+
+#Example 
+feet = 3
+inches = 2
+
+new_datetime = add_measurements(feet, inches)
+print(new_datetime)
+print('Type:', type(new_datetime))
