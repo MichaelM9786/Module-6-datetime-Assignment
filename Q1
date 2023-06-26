@@ -10,7 +10,7 @@ def main():
 		data = line.strip().split("\t")
 		if len(data) == 6:
 			d, t, store, item, cost, payment = data
-			print ("{dt}\t{time_string}\t{store}\t{item}\t{cost}\t{payment}")
+			print ("{dt}\t{dtstring}\t{store}\t{item}\t{cost}\t{payment}")
 			
 			
 main()
